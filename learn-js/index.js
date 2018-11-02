@@ -11,6 +11,7 @@ function OutputEvenNumbersFor(){
 
 // Перепишите код, заменив цикл for на while, без изменения поведения цикла.
 
+
 // for (var i = 0; i < 3; i++) {
 //   alert( "номер " + i + "!" );
 // }
