@@ -1,7 +1,7 @@
 // При помощи цикла for выведите чётные числа от a до 100.
 
 function OutputEvenNumbersFor(){
-  var  a = prompt('Введите число от которого выводяться четные числа');
+    var  a = prompt('Введите число от которого выводяться четные числа');
     for (a; a <= 100; a++) {
         if (a % 2 === 0) {
             alert( a );
@@ -57,3 +57,81 @@ function RepeatIfinputIsIncorrect(){
 //     alert( a ); // простое
 //   }
 // }
+
+
+// Напишите if..else, соответствующий следующему switch:
+function SwitchIfElse() {
+    var browser = prompt('Введите название браузера');
+    if(browser == 'IE') {
+        alert('О, да у вас '+ browser);
+    } else if (browser == 'Chrome'
+        || browser == 'Firefox'
+        || browser == 'Safari'
+        || browser == 'Opera') {
+        alert('Да, и ' + browser + 'мы поддерживаем');
+    } else {
+        alert('Мы надеемся, что и в вашем браузере все ок!');
+    }
+}
+
+// Переписать if'ы в switch
+function IfElseSwitch() {
+    var a = +prompt('a?', '');
+    switch (a) {
+        case 0:
+            alert( 0 );
+            break;
+
+        case 1:
+            alert( 1 );
+            break;
+
+        case 2:
+        case 3:
+            alert( '2,3' );
+            break;
+    }
+}
+
+
+// Перепишите функцию, используя оператор '?' или '||'
+
+// оператор '?'
+function chekAgeFirst(age) {
+    return(age < 18) ? true : confirm('Родители разрешили?');
+}
+
+
+// оператор ||
+
+function chekAgeSecond(age) {
+    return (age< 18) || confirm ('родители разрешили?')
+}
+// Сравнение чисел РАБОТАЕТ ТОЛЬКО В КОНСОЛИ
+function minNum(a, b) {
+    if (a > b) {
+        return a;
+    }
+    else {
+        return b;
+    }
+}
+
+
+// функция pow(x,n) возведение x в n-степень
+
+var x = prompt("Введите число", "");
+var n = prompt("Введите степень", "");
+if (n < 0) {
+    alert('Степень ' + n + ' не используется, нужна степень больше нуля');
+} else {
+    alert(pow(x, n));
+}
+
+function pow(x, n) {
+    var result = 1;
+    for (var i = 0; i < n; i++) {
+        result *= x;
+    }
+    return result;
+}
